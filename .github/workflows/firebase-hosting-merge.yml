@@ -17,11 +17,12 @@ jobs:
 
       - name: Clean cache
         run: npm cache clear --force
-
+      
+      - name: functions
+        run: cd functions
+      
       - name: Install dependencies
-        run: 
-          - cd funtions
-          - npm ci
+        run: npm ci
 
       - name: Deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
