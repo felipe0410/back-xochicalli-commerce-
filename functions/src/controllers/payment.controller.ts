@@ -1,9 +1,9 @@
 import Stripe from "stripe";
-import { STRIPE_PRIVATE_KEY } from "../config.js";
+import { STRIPE_PRIVATE_KEY } from "../config";
 
-const stripe = new Stripe(STRIPE_PRIVATE_KEY);
+const stripe = new Stripe(STRIPE_PRIVATE_KEY, { apiVersion: '2022-11-15' });
 
-export const createSession = async (req, res) => {
+export const createSession = async (req: any, res: any) => {
   try {
     const session = await stripe.checkout.sessions.create({
       line_items: [
@@ -34,7 +34,7 @@ export const createSession = async (req, res) => {
     });
     console.log(session);
     return res.json({ url: session.url });
-  } catch (error) {
+  } catch (error: any) {
     return res.status(500).json({ message: error.message });
   }
 };
