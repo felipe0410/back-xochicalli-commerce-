@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { createSession } from "../controllers/payment.controller";
+import {Router} from "express";
+import {createSession} from "../controllers/payment.controller";
 const router = Router();
 
 router.post("/create-checkout-session", createSession);
