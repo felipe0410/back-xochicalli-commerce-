@@ -17,7 +17,6 @@ const db = getFirestore(app);
 // {
 //     "hosting": {
 //       "site": "back-xochicalli-commerce",
-  
 //       "public": "public",
 //       ...
 //     }
