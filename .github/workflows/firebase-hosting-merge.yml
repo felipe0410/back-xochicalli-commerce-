@@ -25,7 +25,9 @@ jobs:
       - name: List contents of 'functions' directory
         run: ls -al
       - name: Install dependencies
-        run: 
+        run: |
+          cd functions
+          ls -al
           npm ci
 
       - name: Deploy
