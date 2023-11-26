@@ -19,7 +19,9 @@ jobs:
         run: npm cache clear --force
 
       - name: Install dependencies
-        run: npm ci
+        run: 
+          - cd funtions
+          - npm ci
 
       - name: Deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
