@@ -22,10 +22,10 @@ jobs:
 
       - name: Change to 'functions' directory
         run: cd functions
-
+      - name: List contents of 'functions' directory
+        run: ls -al
       - name: Install dependencies
         run: 
-          ls
           npm ci
 
       - name: Deploy
